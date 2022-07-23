@@ -33,6 +33,16 @@ class FavoriteController: UIViewController, FavoriteViewProtocol {
         tableView =  favoriteTableView
         presenter?.updateItems()
         tableView?.reloadData()
+        
+        print("viewDidLoad from FavoriteController")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear from FavoriteController")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappear from FavoriteController")
     }
     
     override func viewWillAppear(_ animated: Bool) {

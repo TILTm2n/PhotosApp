@@ -8,7 +8,7 @@
 import Foundation
 
 struct Information {
-    var likes: Int16
+    var likes: Int16 // TODO: посмотреть, вроде как можно просто через Int, либо поменять в моделе
     var location: String?
     var imageUrl: String?
     var authorName: String

@@ -8,6 +8,8 @@
 import UIKit
 import SDWebImage
 
+
+// TODO: тоже не нужен класс картинок, лучше во вью контроллере определить всё
 class DetailImageView: UIImageView {
 
     init() {

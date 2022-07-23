@@ -27,6 +27,7 @@ class NetworkManager: NetworkManagerProtocol {
             }
             
             do {
+                // TODO: опционал убрать
                 let apiResponse = try JSONDecoder().decode(APIResponse.self, from: data!)
                 completion(.success(apiResponse.results))
             } catch {
@@ -35,5 +36,4 @@ class NetworkManager: NetworkManagerProtocol {
             
         }.resume()
     }
-    
 }

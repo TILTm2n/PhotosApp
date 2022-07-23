@@ -8,6 +8,8 @@
 import UIKit
 import Foundation
 
+// TODO: private проставлять в методах и переменных везде, где нужно
+
 protocol StorageManagerProtocol {
     func addPhoto(info: Information?)
     func getPhotos() -> [FavoritePhoto]
@@ -16,6 +18,7 @@ protocol StorageManagerProtocol {
 
 class StorageManager: StorageManagerProtocol {
     
+    // TODO: убрать опционал
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func addPhoto(info: Information?) {
@@ -37,16 +40,19 @@ class StorageManager: StorageManagerProtocol {
     
     func getPhotos() -> [FavoritePhoto]{
         var favoritePfotos: [FavoritePhoto] = []
+
         do {
             favoritePfotos = try context.fetch(FavoritePhoto.fetchRequest())
         } catch let error {
             print(error)
         }
+
         return favoritePfotos
     }
     
     func deletePhoto(photoToDelete: FavoritePhoto) {
         context.delete(photoToDelete)
+        
         do {
             try context.save()
         } catch let error {

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// TODO: в протоколах не нужны иниты
 protocol DetailPresenterProtocol: AnyObject {
     init(view: DetailViewProtocol, info: Information?, storageManager: StorageManagerProtocol)
     func setInformation()
@@ -58,7 +59,6 @@ class DetailPresenter: DetailPresenterProtocol {
         } else {
             detailView?.deleteError()
         }
-        
     }
     
 }

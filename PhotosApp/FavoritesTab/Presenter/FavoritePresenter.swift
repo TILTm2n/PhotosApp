@@ -15,7 +15,7 @@ protocol FavoritePresenterProtocol: AnyObject {
  
 class FavoritePresenter: FavoritePresenterProtocol {
     
-    var items: [FavoritePhoto]?
+    var items: [FavoritePhoto]? // TODO: private поставить, вроде локально только используется
     weak var view: FavoriteViewProtocol?
     var storage: StorageManagerProtocol?
     

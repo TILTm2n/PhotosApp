@@ -27,7 +27,7 @@ class SearchPresenter: SearchPresenterProtocol {
     
     func getItems(with query: String) {
         networkManager.fetchPhotos(with: query) { [weak self] result in
-            guard let self = self else { return }
+            guard let self = self else { return } // не guard, а self?.
             DispatchQueue.main.async {
                 switch result{
                 case .success(let items):

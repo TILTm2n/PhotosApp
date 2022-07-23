@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(FavoritePhoto)
+@objc(FavoritePhoto) // TODO: с пустым классом разобраться, посмотреть в инете мб
 public class FavoritePhoto: NSManagedObject {
     
 }

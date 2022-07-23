@@ -26,7 +26,7 @@ class DetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("viewDidLoad from DetailController")
         view.backgroundColor = UIColor(named: "light")
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPhoto))
@@ -76,6 +76,15 @@ class DetailController: UIViewController {
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear from DetailController")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappear from DetailController")
+    }
+    
     
     func setConstraints() {
         NSLayoutConstraint.activate([

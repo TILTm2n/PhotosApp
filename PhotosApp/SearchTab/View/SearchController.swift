@@ -36,6 +36,20 @@ class SearchController: UIViewController, UISearchBarDelegate {
         view.addSubview(collectionView)
         self.collectionView = collectionView
         
+        print("viewDidLoad from SearchController")
+        
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        print("viewWillAppear from SearchController")
+//    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear from SearchController")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappear from SearchController")
     }
     
     override func viewDidLayoutSubviews() {
